@@ -1,0 +1,40 @@
+Prompt Engineering - refining inputs to get optimal AI outputs.
+
+Prompt engineering is powerful, but AI is not perfect even with perfect prompts.
+
+Structure:
+1. Task: what do you want to do?
+	Persona: Who is the AI? (marketer, teacher)
+	Format: Output type (tables, csv file, list)
+
+2. Context:
+	Good: "Ideas for a gift under $30."
+	Great: "5 ideas for a 29 year-old who loves winter sports and just switched from snowboarding to skiing. Budget: $30."
+
+3. Reference
+	Provide additional data, examples, or specific ideas to guide the AI.
+
+4. Evaluate
+	Review the output.
+
+5. Iterate
+	Feed errors back in.
+	Add more details or refine the constraints.
+
+
+Refinement Strategies
+If results are lacking:
+1. Mark up prompt into T-C-R
+	T: Make a schedule for the team (output: csv)
+	C: Specific details about individual schedules
+	R: Past schedule templates
+2. Separate into shorter tasks
+		Don't use monolithic prompts
+		Split up into multiple prompts
+
+3. Try different phrasing
+	Use an analogous task: instead of "Write a marketing plan," try "Write a story about how this product fits into a customer's life."
+
+4. Introduce Constraints
+	"Only music from Canada."
+	"Recipes that take less than 30 minutes."
