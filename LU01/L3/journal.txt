@@ -1,0 +1,10 @@
+Data Centers consume tons of power and water, negatively affecting people living near them.
+
+AI chatbots don't learn from what you say. When you send an 11th chat, the AI receives the previous 10 chats along with the 11th.
+
+Inbreeding - AI trained on AI data. Needs good data: "virgin data."
+
+AI is not biased, but the data that it's trained on can be.
+
+AI - "yes-man."
+

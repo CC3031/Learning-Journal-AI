@@ -1,0 +1,18 @@
+95% of AI-implementing enterprises failed to achieve the goal of rapid revenue acceleration. Furthermore, companies that tried rolling out their own AI tools had an even higher failure rate.
+
+LLM - predicts what word comes next for any piece of text. Assigns probability for each best word.
+
+The way an LLM behaves depends on what it's trained on.
+
+Continuous values / parameters - the data the model is trained on. Large language models can have hundreds of billions of these parameters.
+
+Transformer model architecture - basically all LLMs use it. Introduced by "Attention Is All You Need" article by Google in 2017.
+
+AI has emergent abilities. Originally used to translate English to German, somehow was capable of doing other things.
+How is an AI able to summarize a sentence?
+
+Weak/Narrow AI - only good at specialized things.
+
+Tokenizing - prompt text is chopped into tokens (3-5 letters).
+
+Companies are suing AI companies for using their copyrighted material to train their LLMs. A lot of them are being dropped.
