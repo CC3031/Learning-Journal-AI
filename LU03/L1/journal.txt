@@ -1,0 +1,3 @@
+Prompt engineering for images, video, and audio - needs to be more specific: tone, directing.
+
+Ethical use-case for text-to-speech: mute people, reading long articles

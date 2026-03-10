@@ -1,0 +1,9 @@
+RAG - giving model a bunch of context, like "priming it."
+
+Pros
+	More cost-effective than building own model.
+	More accurate.
+
+Cons
+	Model still imperfect, will not perfectly regurgitate fed material.
+	Feeding confidential data into model you do not own.
