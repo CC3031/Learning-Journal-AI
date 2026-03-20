@@ -1,0 +1,10 @@
+/* Cookie click animation */
+#cookie-image {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.1s ease-out;
+}
+
+#cookie-image:active {
+    transform: scale(0.95);
+}

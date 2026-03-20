@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cookie Clicker</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body class="flex flex-col min-h-screen bg-gray-100">
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 py-6 flex items-center gap-4">
+                <span class="text-4xl">🍪</span>
+                <h1 class="text-4xl font-bold text-gray-800">Cookie Clicker</h1>
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="bg-gray-800 text-white shadow-md">
+            <div class="max-w-6xl mx-auto px-4 py-3">
+                <ul class="flex gap-6">
+                    <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition">Shop</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition">Achievements</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition">Settings</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-grow px-4 py-12">
+            <div class="max-w-6xl mx-auto">
+                <!-- Game Stats -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div>
+                            <p class="text-gray-600 text-sm font-semibold uppercase">Total Cookies</p>
+                            <p class="text-4xl font-bold text-yellow-600" id="click-count">0</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 text-sm font-semibold uppercase">Passive Generation</p>
+                            <p class="text-3xl font-bold text-green-600" id="cps-display">0.0</p>
+                            <p class="text-xs text-gray-500">cookies per second</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 text-sm font-semibold uppercase">Grandmas Owned</p>
+                            <p class="text-3xl font-bold text-purple-600" id="grandma-count">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Clicker Area and Store -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Clicker Section -->
+                    <div class="lg:col-span-2 flex flex-col items-center justify-center">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-8">Click the Cookie!</h2>
+                        <div id="cookie-container" class="mb-8">
+                            <img
+                                src="https://via.placeholder.com/200/FFD700/000000?text=Cookie"
+                                alt="Cookie"
+                                id="cookie-image"
+                                class="cursor-pointer hover:shadow-lg transition"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Store Section -->
+                    <div class="bg-white rounded-lg shadow-md p-6 h-fit">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Store</h3>
+                        
+                        <!-- Grandma Item -->
+                        <div class="border border-gray-300 rounded-lg p-4 hover:border-yellow-400 transition mb-4">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Grandma</h4>
+                                    <p class="text-sm text-gray-600">+1.0 cookies/sec</p>
+                                    <p class="text-sm text-purple-600 font-semibold mt-1">Owned: <span id="grandma-count">0</span></p>
+                                </div>
+                                <span class="text-3xl">👵</span>
+                            </div>
+                            <div class="flex gap-2 items-center mb-3">
+                                <span class="text-sm text-yellow-600 font-semibold">Cost: 100</span>
+                                <span class="text-2xl">🍪</span>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button
+                                    id="buy-grandma-1"
+                                    class="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 1
+                                </button>
+                                <button
+                                    id="buy-grandma-10"
+                                    class="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 10
+                                </button>
+                                <button
+                                    id="buy-grandma-100"
+                                    class="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 100
+                                </button>
+                                <button
+                                    id="buy-grandma-max"
+                                    class="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy Max
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Factory Item -->
+                        <div class="border border-gray-300 rounded-lg p-4 hover:border-yellow-400 transition mb-4">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Factory</h4>
+                                    <p class="text-sm text-gray-600">+10.0 cookies/sec</p>
+                                    <p class="text-sm text-blue-600 font-semibold mt-1">Owned: <span id="factory-count">0</span></p>
+                                </div>
+                                <span class="text-3xl">🏭</span>
+                            </div>
+                            <div class="flex gap-2 items-center mb-3">
+                                <span class="text-sm text-yellow-600 font-semibold">Cost: 10000</span>
+                                <span class="text-2xl">🍪</span>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button
+                                    id="buy-factory-1"
+                                    class="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 1
+                                </button>
+                                <button
+                                    id="buy-factory-10"
+                                    class="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 10
+                                </button>
+                                <button
+                                    id="buy-factory-100"
+                                    class="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 100
+                                </button>
+                                <button
+                                    id="buy-factory-max"
+                                    class="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy Max
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Cookie Cherub Item -->
+                        <div class="border border-gray-300 rounded-lg p-4 hover:border-yellow-400 transition mb-4">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Cookie Cherub</h4>
+                                    <p class="text-sm text-gray-600">+100.0 cookies/sec</p>
+                                    <p class="text-sm text-pink-600 font-semibold mt-1">Owned: <span id="cherub-count">0</span></p>
+                                </div>
+                                <span class="text-3xl">👨</span>
+                            </div>
+                            <div class="flex gap-2 items-center mb-3">
+                                <span class="text-sm text-yellow-600 font-semibold">Cost: 1,000,000</span>
+                                <span class="text-2xl">🍪</span>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button
+                                    id="buy-cherub-1"
+                                    class="bg-pink-600 hover:bg-pink-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 1
+                                </button>
+                                <button
+                                    id="buy-cherub-10"
+                                    class="bg-pink-600 hover:bg-pink-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 10
+                                </button>
+                                <button
+                                    id="buy-cherub-100"
+                                    class="bg-pink-600 hover:bg-pink-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 100
+                                </button>
+                                <button
+                                    id="buy-cherub-max"
+                                    class="bg-pink-600 hover:bg-pink-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy Max
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Cookie God Item -->
+                        <div class="border border-gray-300 rounded-lg p-4 hover:border-yellow-400 transition">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Cookie God</h4>
+                                    <p class="text-sm text-gray-600">+10000.0 cookies/sec</p>
+                                    <p class="text-sm text-yellow-700 font-semibold mt-1">Owned: <span id="god-count">0</span></p>
+                                </div>
+                                <span class="text-3xl">🧖</span>
+                            </div>
+                            <div class="flex gap-2 items-center mb-3">
+                                <span class="text-sm text-yellow-600 font-semibold">Cost: 1,000,000,000</span>
+                                <span class="text-2xl">🍪</span>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button
+                                    id="buy-god-1"
+                                    class="bg-yellow-600 hover:bg-yellow-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 1
+                                </button>
+                                <button
+                                    id="buy-god-10"
+                                    class="bg-yellow-600 hover:bg-yellow-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 10
+                                </button>
+                                <button
+                                    id="buy-god-100"
+                                    class="bg-yellow-600 hover:bg-yellow-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy 100
+                                </button>
+                                <button
+                                    id="buy-god-max"
+                                    class="bg-yellow-600 hover:bg-yellow-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-2 rounded transition text-sm"
+                                >
+                                    Buy Max
+                                </button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-gray-300 mt-auto">
+            <div class="max-w-6xl mx-auto px-4 py-6">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-sm">&copy; 2026 Cookie Clicker. All rights reserved.</p>
+                    </div>
+                    <div class="flex gap-6 items-center">
+                        <a href="#" class="text-sm hover:text-yellow-400 transition">Source Code</a>
+                        <div class="flex gap-4">
+                            <a href="#" class="hover:text-yellow-400 transition" title="Twitter">Twitter</a>
+                            <a href="#" class="hover:text-yellow-400 transition" title="Facebook">Facebook</a>
+                            <a href="#" class="hover:text-yellow-400 transition" title="Instagram">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
