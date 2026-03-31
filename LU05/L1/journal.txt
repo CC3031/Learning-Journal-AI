@@ -1,0 +1,4 @@
+AI uses a lot of RAM - 8TB!!
+Raspberry PI: little single-board computer.
+
+My class would NOT survive a zombie invasion.

@@ -1,0 +1,2 @@
+ISO image - OS VM uses.
+Don't do Debian for homework.

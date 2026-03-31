@@ -1,0 +1,6 @@
+CasaOS - suite of apps. Creates a partition that uses ZFS. Also downloads Docker. One stop shop for home server. Copy command:
+curl -fsSL https://get.casaos.io | sudo bash
+into VM to install.
+ZFS - file system that manages large amounts of files. 
+
+NAS - Network Attached Storage. Multiple people can access and use pieces of storage at the same time.
