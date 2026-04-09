@@ -1,0 +1,10 @@
+Qwen 3.5 - 100GB of RAM to run!!!
+Solution -> compress AI models.
+2 bit model of Qen 3.5 - 11 GB of RAM
+Problem? Lower quality. But breakthrough: Google's TurboQuant, somehow figured out how to compress a model and keep its full quality.
+
+Dockers only virtualize the OS, not hardware like in VMs, making it faster and more efficient.
+3 elements of Dockers
+Dockerfile - code that tells Docker how to build an image
+Image - snapshot of your software and its dependencies
+Container - spinned up by images, actual software running.

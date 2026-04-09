@@ -1,0 +1,2 @@
+Smaller ai models start talking to themselves and overthink stuff.
+Alpaca gives you a nice gui.

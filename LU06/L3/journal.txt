@@ -1,0 +1,24 @@
+cp - copy+paste, can use it to copy+paste files into docker containers.
+
+SYSTEM - use it to essentially RAG a model.
+
+
+Instructions:
+Navigate to Modelfile
+-	cd [filepath]
+
+Copy the Modelfile into the docker container
+-	docker cp Modelfile ollama:/tmp/Modelfile
+
+Enter the container
+docker exec -it ollama bash
+
+Create your specialized model
+-	cd /tmp
+-	ollama create [name] -f Modelfile
+
+Verify it was created
+-	ollama list
+
+Exit container
+-	exit
