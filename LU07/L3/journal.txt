@@ -1,0 +1,44 @@
+Prompt 1:
+	In Svelte 5 Create a header component that displays information about course formats at Indian Hills Community College. The header should:
+	- Have a title "Register for Courses"
+	- Include a paragraph explaining that the college offers classes in various formats
+	- Display a bulleted list of three formats: "Face-to-Face", "Live Virtual Learning", and "Online learning (WWW)"
+	- Use a red/maroon color scheme (text-red-900 for the title)
+	- Accept the formats as a prop so they can be passed in
+	Add this header in a new file called Header.svelte in the src/lib folder.
+
+
+Prompt 2:
+	In a seprate file called Form.svelte Create a registration form component with the following fields:
+	- Name (text input)
+	- Address (text input)
+	- Program (dropdown with options: Welding, Computer Software Development, Cyber Security, Multimedia Design)
+	- Class Format (dropdown that uses the same formats from the header)
+
+	Style it with:
+	- A white card with shadow and a red top border
+	- Red focus rings on inputs
+	- "Student Registration" as the heading
+	- Accept programs and formats as props
+
+
+Prompt 3:
+	Add a conditional rendering section to the form that shows on-campus options.
+	This section should:
+	- Only display when a variable showOnCampusOptions is true
+	- Have a light red background (bg-red-50) with a left red border
+	- Include two dropdowns: Meal Plan and Dorm Options
+	- Meal plans: "Warrior Plan", "Maroon Plan", "Gold Plan"
+	- Dorm options: "Oak", "Trustee", "Keokuk"
+	- Have the heading "On-Campus Options"
+	For now, set showOnCampusOptions to true so we can see it.
+
+
+Prompt 4:
+	In the main page component, import both the Header and Form components.
+	Set up the data:
+	- Create a formats array with the three format options
+	- Create a programs array with objects containing id and name for each program
+	- Pass these as props to the appropriate components
+	- Add a Register button at the bottom styled with the red theme
+

@@ -1,0 +1,11 @@
+AI-Driven Development - literally just vibe coding.
+
+All security is backed by encryption. HTTPS, secured by SSH token, backed by encryption.
+
+Cryptography relies on one-way math, meaning a formula that is really simple to follow, but incredibly difficult to reverse-engineer.
+
+With traditional computing, you can brute force it over a really, really long time (1 billion+ years), quantum computing however could do this in hours or days.
+
+Biggest quantum computer is 6100 qubits (transistors).
+
+AI IDES, just normal IDEs with AI integration. Ex: Cursor.

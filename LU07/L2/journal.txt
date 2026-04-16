@@ -1,0 +1,24 @@
+Prompt 1:
+	Create a simple event page that displays:
+	- Event name: "Iowa Tech Summit"
+	- Description: "Connect, Learn and Grow at Iowa's Premier Technology Conference"
+	- Date: September 15, 2026
+	- Time: 10:00 AM
+	- Location: Iowa Event Center
+	Style it nicely with Tailwind CSS. Make the event name blue and bold.
+
+
+Prompt 2:
+	Extract the event name into a reusable Header component in src/lib/Header.svelte.
+	The component should accept an eventName prop with a default value of "Event Name Here".
+	Keep the blue, bold styling.
+
+
+Prompt 3:
+	Extract the event details (description, date, time, location) into a reusable EventDetails component in src/lib/EventDetails.svelte.
+	The component should accept these props:
+	- description
+	- date
+	- time
+	- location
+	Style it as a card with a white background, rounded corners, shadow, and border.
